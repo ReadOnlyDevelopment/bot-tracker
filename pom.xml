@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.readonly.dev</groupId>
+  <artifactId>bot-tracker</artifactId>
+  <version>0.1.0</version>
+  <name>bot-tracker</name>
+  <description>Discord Bot Metrics Tracking</description>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <bintray.repo>romvoid95/maven</bintray.repo>
+    <bintray.package>bot-tracker</bintray.package>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <distributionManagement>
+    <repository>
+        <id>bintray-romvoid95-maven</id>
+        <name>romvoid95-maven</name>
+        <url>https://api.bintray.com/maven/romvoid95/maven/bot-tracker/;publish=1</url>
+    </repository>
+  </distributionManagement>
+  
+</project>
